@@ -1,0 +1,30 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/web?serverTimezone=GMT%2B8
+  redis:
+    port: 6379
+    host: localhost
+  data:
+    mongodb:
+      host: 62.234.220.250
+      port: 27017
+      database: recommender
+      username: "root"
+      password: "123456"
+
+logging:
+  level:
+    com.bjut: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
